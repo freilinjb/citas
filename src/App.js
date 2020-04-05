@@ -6,6 +6,7 @@ function App() {
 
   //Citas en el local storage
   let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+
   //pregunta si no hay citas inicializalo como un arreglo vacio
   if(!citasIniciales) {
     citasIniciales = [];
@@ -15,7 +16,7 @@ function App() {
 
 
   //Arreglo de citas
-  const [citas, guardarCitas] = useState([citasIniciales]);
+  const [citas, guardarCitas] = useState([citasIniciales ]);
 
   //Use effect para realizar ciertas operaciones cuando el state cambie
   //Se ejecuta cuando el componente esta listo o cuand o hay cambios en el componente
