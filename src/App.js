@@ -30,7 +30,7 @@ function App() {
 
     }
     //cada vez que cambie el state de citas se ejecuta la funcion
-  }, [citas])
+  }, [citas, citasIniciales])
 
   // Funcion que toma las citas actuales y agrega la nueva
   const crearCita = cita => {
@@ -56,7 +56,7 @@ function App() {
         <hr></hr>
         <div className="row justify-content-center">
           <div className="col-lg-6 col-sm-12">
-            <Formulario crearCita={crearCita}/>
+            <Formulario key="crea-cita" crearCita={crearCita}/>
           </div>
           <div className="col-lg-6 col-sm-12">
             <h3 className="text-monospace text-center titulo mt-3">{titulo}</h3>

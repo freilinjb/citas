@@ -1,11 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Cita = (props) => {
 
-    const { cita, eliminarCita } = props;
-
-    console.log(cita);
-    
+    const { cita, eliminarCita } = props;    
     
     const { id ,mascota, propietario, fecha, hora, sintomas } = cita;
 
@@ -20,5 +19,9 @@ const Cita = (props) => {
         </div>
      );
 }
- 
+Cita.propTypes = {
+    cita: PropTypes.array.isRequired,
+    eliminarCita: PropTypes.func.isRequired
+} 
+
 export default Cita;

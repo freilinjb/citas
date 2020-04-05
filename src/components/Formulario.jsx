@@ -1,5 +1,6 @@
 import React,{ Fragment, useState} from 'react';
 import {  v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 
 const Formulario = ( props ) => {
@@ -29,7 +30,7 @@ const Formulario = ( props ) => {
 
 
     //Extraer los valores
-    const { id, mascota, propietario, fecha, hora, sintomas } = cita;
+    const { mascota, propietario, fecha, hora, sintomas } = cita;
 
     //Cuando el usuario preciona agrergar cita
     const submitCita = (e) =>{
@@ -96,6 +97,10 @@ const Formulario = ( props ) => {
             </form>
         </Fragment>
      );
+}
+
+Formulario.propTypes = {
+    crearCita: PropTypes.func.isRequired
 }
  
 export default Formulario;
