@@ -13,6 +13,12 @@ function App() {
     guardarCitas([...citas,cita]);
   } 
 
+  //Funcion que elimina una cita por su id
+  const eliminarCita = id => {
+    console.log(`eliminando: ${id}`);
+    
+  }
+
   return (
     <Fragment>
         <h1 className=" text-center text-white text-monospace mt-2">ADMINISTRADOR DE PACIENTES</h1>      
@@ -25,7 +31,7 @@ function App() {
           <div className="col-lg-6 col-sm-12">
             <h3 className="text-monospace text-center titulo mt-3">ADMINISTRA TUS CITAS</h3>
             { citas.map( cita =>(
-              <Cita key = {cita.key} cita={cita}/>
+              <Cita key={cita.id} cita={cita} eliminarCita={eliminarCita}/>
             ))}
           </div>
         </div>
