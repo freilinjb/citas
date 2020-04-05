@@ -8,8 +8,8 @@ function App() {
 
   // Funcion que toma las citas actuales y agrega la nueva
   const crearCita = cita => {
-    console.log(cita);
-    console.log('enviando cita');
+    
+    guardarCitas([...citas,cita]);
   } 
 
   return (
