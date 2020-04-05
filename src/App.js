@@ -3,7 +3,6 @@ import Formulario from './components/Formulario';
 
 function App() {
 
-  const [citas, guardarCitas] = useState();
 
   return (
     <Fragment>
@@ -11,11 +10,11 @@ function App() {
         <hr></hr>
         <div className="row justify-content-center">
           <div className="col-lg-6 col-sm-12">
-            <h3>CREAR CITA</h3>
-            <Formulario citas={citas}/>
+          <h3 class="text-monospace text-center titulo mt-3">CREAR CITA</h3>
+            <Formulario/>
           </div>
           <div className="col-lg-6 col-sm-12">
-            <h3 class="text-monospace text-center titulo">ADMINISTRA TUS CITAS</h3>
+            <h3 class="text-monospace text-center titulo mt-3">ADMINISTRA TUS CITAS</h3>
           </div>
         </div>
       </div>
