@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Fragment, useState} from 'react';
+import Formulario from './components/Formulario';
 
 function App() {
+
+  const [citas, guardarCitas] = useState();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+        <h1 class=" text-center text-white text-monospace mt-2">ADMINISTRADOR DE PACIENTES</h1>      <div className="container mt-3">
+        <hr></hr>
+        <div className="row justify-content-center">
+          <div className="col-lg-6 col-sm-12">
+            <h3>CREAR CITA</h3>
+            <Formulario citas={citas}/>
+          </div>
+          <div className="col-lg-6 col-sm-12">
+            <h3 class="text-monospace text-center titulo">ADMINISTRA TUS CITAS</h3>
+          </div>
+        </div>
+      </div>
+    </Fragment>
   );
 }
-
+ 
 export default App;
