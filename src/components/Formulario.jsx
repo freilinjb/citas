@@ -20,7 +20,8 @@ const Formulario = () => {
         })
     }
 
-    
+    const [error, actualizarError] = useState(false);
+
 
     //Extraer los valores
     const { id, mascota, propietario, fecha, hora, sintomas } = cita;
@@ -33,11 +34,12 @@ const Formulario = () => {
         //Validar
         if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' ||
         hora.trim() === '' || sintomas.trim() === '') {
-            console.log('Hay un error');
+            // console.log('Hay un error');
+            actualizarError(true);
             //EL return impide que sesiga ejecutando mas abajo
             return;
         } 
-
+        actualizarError(false);
         console.log('agregando...');
         
 
@@ -52,6 +54,9 @@ const Formulario = () => {
 
     return ( 
         <Fragment>
+          <h3 className="text-monospace text-center titulo mt-3">CREAR CITA</h3>
+          { error ? <p className="alert alert-danger error">Todos los campos son obligatorios</p>
+           : null }
             <form onSubmit={submitCita}>
                 <div className="form-group">
                     <label htmlFor="mascota" className="active">Nombre Mascota</label>

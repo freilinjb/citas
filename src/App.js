@@ -11,7 +11,6 @@ function App() {
         <hr></hr>
         <div className="row justify-content-center">
           <div className="col-lg-6 col-sm-12">
-          <h3 className="text-monospace text-center titulo mt-3">CREAR CITA</h3>
             <Formulario/>
           </div>
           <div className="col-lg-6 col-sm-12">

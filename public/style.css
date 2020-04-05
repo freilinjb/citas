@@ -6,3 +6,10 @@ body {
     background: rgb(8,2,106);
     background: linear-gradient(90deg, rgba(8,2,106,1) 0%, rgba(0,0,171,1) 45%, rgba(0,20,85,1) 100%);
 }
+
+.error {
+    padding: 30px;
+    font-weight: 600;
+    color: red;
+    text-align: center;
+}
