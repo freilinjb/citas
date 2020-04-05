@@ -56,6 +56,14 @@ const Formulario = ( props ) => {
         crearCita(cita);
 
         //Reiniciar el FORM
+        actualizarCita({
+            id: '',
+            mascota: '',
+            propietario: '',
+            fecha: '',
+            hora: '',
+            sintomas: ''
+        });
     }
 
     return ( 
