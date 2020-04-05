@@ -1,8 +1,17 @@
-import React,{Fragment} from 'react';
+import React,{Fragment, userState } from 'react';
 
 const Formulario = (  ) => {
 
-    
+    const [cita, actualizarCita] = userState({
+        id: '',
+        mascota: '',
+        propietario: '',
+        fecha: '',
+        hora: '',
+        sintomas: ''
+    });
+
+
     return ( 
         <Fragment>
             <h3>ADMINISTRADOR DE CITAS</h3>
