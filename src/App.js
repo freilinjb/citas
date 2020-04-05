@@ -1,5 +1,6 @@
 import React,{Fragment, useState} from 'react';
 import Formulario from './components/Formulario';
+import Cita from './components/Cita';
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
           </div>
           <div className="col-lg-6 col-sm-12">
             <h3 className="text-monospace text-center titulo mt-3">ADMINISTRA TUS CITAS</h3>
+            { citas.map( cita =>(
+              <Cita key = {cita.key} cita={cita}/>
+            ))}
           </div>
         </div>
       </div>

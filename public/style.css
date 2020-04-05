@@ -13,3 +13,11 @@ body {
     color: red;
     text-align: center;
 }
+
+.cita {
+    padding: 20px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    background-color: white;
+}
