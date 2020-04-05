@@ -2,7 +2,10 @@ import React,{ Fragment, useState} from 'react';
 import {  v4 as uuidv4 } from 'uuid';
 
 
-const Formulario = () => {
+const Formulario = ( props ) => {
+
+    const  {crearCita} = props;
+
 
     const [cita, actualizarCita] = useState({
         id: '',
@@ -31,7 +34,6 @@ const Formulario = () => {
     //Cuando el usuario preciona agrergar cita
     const submitCita = (e) =>{
         e.preventDefault();
-        console.log('ENVIADO');
 
         //Validar
         if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' ||
@@ -44,17 +46,14 @@ const Formulario = () => {
 
 
         actualizarError(false);
-        console.log('agregando...');
         
 
  
         //Asignar un ID
-        cita.id = uuidv4();
-        console.log(cita);
-        
+        cita.id = uuidv4();        
 
         //Crear la cita
-
+        crearCita(cita);
 
         //Reiniciar el FORM
     }

@@ -3,6 +3,14 @@ import Formulario from './components/Formulario';
 
 function App() {
 
+  //Arreglo de citas
+  const [citas, guardarCitas] = useState([]);
+
+  // Funcion que toma las citas actuales y agrega la nueva
+  const crearCita = cita => {
+    console.log(cita);
+    console.log('enviando cita');
+  } 
 
   return (
     <Fragment>
@@ -11,7 +19,7 @@ function App() {
         <hr></hr>
         <div className="row justify-content-center">
           <div className="col-lg-6 col-sm-12">
-            <Formulario/>
+            <Formulario crearCita={crearCita}/>
           </div>
           <div className="col-lg-6 col-sm-12">
             <h3 className="text-monospace text-center titulo mt-3">ADMINISTRA TUS CITAS</h3>
