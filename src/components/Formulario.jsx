@@ -20,6 +20,8 @@ const Formulario = () => {
         })
     }
 
+    
+
     //Extraer los valores
     const { id, mascota, propietario, fecha, hora, sintomas } = cita;
 
@@ -29,8 +31,17 @@ const Formulario = () => {
         console.log('ENVIADO');
 
         //Validar
+        if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' ||
+        hora.trim() === '' || sintomas.trim() === '') {
+            console.log('Hay un error');
+            //EL return impide que sesiga ejecutando mas abajo
+            return;
+        } 
 
+        console.log('agregando...');
+        
 
+ 
         //Asignar un ID
 
         //Crear la cita
